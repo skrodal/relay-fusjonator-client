@@ -1,5 +1,11 @@
 <!-- Main content -->
     <section id="pageService" class="content app_page hidden">
+
+	    <div class="callout callout-info">
+
+
+	    </div>
+
 	    <div class="row">
 			<div class="col-lg-12 col-md-12">
 				<!-- Session info (DEV) -->

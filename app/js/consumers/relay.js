@@ -17,7 +17,7 @@ var RELAY = (function () {
 	// Mainly for testing/dev
 	function _getAPIRoutesXHR() {
 		return jso.ajax({
-			url: jso.config.get("endpoints").relay,
+			url: jso.config.get("endpoints").relay_fusjonator,
 			dataType: 'json'
 		}).then(function (response) {
 			return response.data;
@@ -27,10 +27,23 @@ var RELAY = (function () {
 		});
 	}
 
-	// Get the version
+	// Get the version of Relay Prod
 	function _getRelayVersionXHR() {
 		return jso.ajax({
 			url: jso.config.get("endpoints").relay + 'version/',
+			dataType: 'json'
+		}).then(function (response) {
+			return response.data;
+		}).fail(function (jqXHR) {
+			var message = jqXHR.responseJSON.message || jqXHR.status + ': ' + jqXHR.statusText;
+			UTILS.alertError("Feil!", "<p>En feil oppstod i samtale med API:</p> <p><code>" + message + "</code></p>");
+		});
+	}
+
+	// Get the version used by the Fusjonator
+	function _getRelayFusjonatorVersionXHR() {
+		return jso.ajax({
+			url: jso.config.get("endpoints").relay_fusjonator + 'version/',
 			dataType: 'json'
 		}).then(function (response) {
 			return response.data;
@@ -51,7 +64,7 @@ var RELAY = (function () {
 			});
 			// Make the call
 			return jso.ajax({
-				url: jso.config.get("endpoints").relay + 'users/verify/',
+				url: jso.config.get("endpoints").relay_fusjonator + 'users/verify/',
 				method: 'POST',
 				data: {
 					user_list: new_csv_arr
@@ -72,7 +85,7 @@ var RELAY = (function () {
 		if (MIGRATION_DATA) {
 			// Make the call
 			return jso.ajax({
-				url: jso.config.get("endpoints").relay + 'users/migrate/',
+				url: jso.config.get("endpoints").relay_fusjonator + 'users/migrate/',
 				method: 'POST',
 				data: {
 					user_list: MIGRATION_DATA
@@ -122,8 +135,11 @@ var RELAY = (function () {
 		getAPIRoutesXHR: function () {
 			return _getAPIRoutesXHR();
 		},
-		getVersionXHR: function () {
+		getRelayVersionXHR: function () {
 			return _getRelayVersionXHR();
+		},
+		getRelayFusjonatorVersionXHR: function () {
+			return _getRelayFusjonatorVersionXHR();
 		},
 		verifyUsersXHR: function () {
 			return _verifyUsersXHR();

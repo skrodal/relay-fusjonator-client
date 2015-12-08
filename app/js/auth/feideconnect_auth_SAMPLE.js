@@ -10,7 +10,7 @@ var DEV = !true;
 
 // Settings pertaining to this client.
 var jso = new JSO({
-	providerID: "FC-relay-fusjonator",
+	providerID: "FC-relay_fusjonator-fusjonator",
 	client_id: "CHANGEME TO: CLIENT_ID IN DASHBOARD",
 	redirect_uri: "CHANGEME TO: REDIRECT URI IN DASHBOARD",
 	authorization: "https://auth.feideconnect.no/oauth/authorization",
@@ -21,7 +21,9 @@ var jso = new JSO({
 	endpoints: {
 		userinfo: "https://auth.feideconnect.no/userinfo",
 		photo: "https://auth.feideconnect.no/user/media/",
-		relay: "https://tr-fusjonator.gk.feideconnect.no/api/relay-fusjonator/"
+		relay_fusjonator: "https://tr-fusjonator.gk.feideconnect.no/api/relay-fusjonator/",
+		// Official Relay API - used solely to get prod version number
+		relay: 'https://techsmith-relay.gk.feideconnect.no/api/techsmith-relay/'
 	}
 });
 

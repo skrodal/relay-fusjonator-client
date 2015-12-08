@@ -12,8 +12,8 @@ var APP = (function () {
 			MENU.init();
 		});
 
-		$.when(RELAY.getVersionXHR()).then(function (version){
-			console.log(version);
+		$.when(RELAY.getRelayVersionXHR(), RELAY.getRelayFusjonatorVersionXHR()).then(function (relayVersion, relayFusjonatorVersion){
+			console.log(relayVersion + ' :: ' + relayFusjonatorVersion);
 		});
 
 	});
