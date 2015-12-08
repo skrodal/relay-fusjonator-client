@@ -15,8 +15,8 @@ var jso = new JSO({
 	redirect_uri: "CHANGEME TO: REDIRECT URI IN DASHBOARD",
 	authorization: "https://auth.feideconnect.no/oauth/authorization",
 	scopes: {
-		request: ["email", "userid-feide", "userinfo", "gk_tr-fusjonator", "gk_tr-fusjonator_admin", "profile"],
-		require: ["email", "userid-feide", "userinfo", "gk_tr-fusjonator", "gk_tr-fusjonator_admin", "profile"]
+		request: ["userinfo", "userinfo-mail", "userinfo-photo", "userinfo-feide", "gk_tr-fusjonator", "gk_tr-fusjonator_admin", "gk_techsmith-relay"],
+		require: ["userinfo", "userinfo-mail", "userinfo-photo", "userinfo-feide", "gk_tr-fusjonator", "gk_tr-fusjonator_admin", "gk_techsmith-relay"]
 	},
 	endpoints: {
 		userinfo: "https://auth.feideconnect.no/userinfo",
