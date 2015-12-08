@@ -10,9 +10,13 @@
 			    RelayFusjonator API snakker med en annen Relay database enn den som er i prod! Fusjonatoren er altså fortsatt i testmodus og
 			    skriver til en gammel database.
 		    </p>
-		    
+
 		    <p>
-			    <strong>Sjekk med <code>simon.skrodal@uninett.no</code> for å få fikset dette.</strong>
+			    <mark>Dette er ikke nødvendigvis feil altså. Dersom du bare skal teste Fusjonatoren er dette faktisk veldig bra :)</mark>
+		    </p>
+
+		    <p>
+			    <strong>Uansett. Dersom Fusjonatoren er klar til å gå 'live', sjekk med <code>simon.skrodal@uninett.no</code> for å få fikset dette.</strong>
 		    </p>
 	    </div>
 
