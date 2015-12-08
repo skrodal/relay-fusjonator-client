@@ -1,9 +1,19 @@
 <!-- Main content -->
     <section id="pageService" class="content app_page hidden">
 
-	    <div class="callout callout-info">
-
-
+	    <div id="versionMismatchWarning" class="callout callout-danger hidden">
+		    <h4>
+			    <i class="icon ion-android-warning"></i>
+				RelayFusjonator API Database Mismatch!
+		    </h4>
+		    <p>
+			    RelayFusjonator API snakker med en annen Relay database enn den som er i prod! Fusjonatoren er altså fortsatt i testmodus og
+			    skriver til en gammel database.
+		    </p>
+		    
+		    <p>
+			    <strong>Sjekk med <code>simon.skrodal@uninett.no</code> for å få fikset dette.</strong>
+		    </p>
 	    </div>
 
 	    <div class="row">

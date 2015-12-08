@@ -34,7 +34,7 @@ var RELAY = (function () {
 			url: jso.config.get("endpoints").relay + 'service/version/',
 			dataType: 'json'
 		}).then(function (response) {
-			return response.data;
+			return response.data.versValue;
 		}).fail(function (jqXHR) {
 			var message = jqXHR.responseJSON.message || jqXHR.status + ': ' + jqXHR.statusText;
 			UTILS.alertError("Feil!", "<p>En feil oppstod i samtale med API:</p> <p><code>" + message + "</code></p>");

@@ -13,8 +13,9 @@ var APP = (function () {
 		});
 
 		$.when(RELAY.getRelayVersionXHR(), RELAY.getRelayFusjonatorVersionXHR()).then(function (relayVersion, relayFusjonatorVersion){
-			console.log(relayVersion);
-			console.log(relayFusjonatorVersion);
+			if(relayVersion !== relayFusjonatorVersion) {
+				$('#versionMismatchWarning').removeClass('hidden');
+			}
 		});
 
 	});
