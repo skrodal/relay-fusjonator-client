@@ -30,7 +30,8 @@ var RELAY = (function () {
 	// Get the version of Relay Prod
 	function _getRelayVersionXHR() {
 		return jso.ajax({
-			url: jso.config.get("endpoints").relay + 'version/',
+			// NOTE: ONLY USE RELAY API HERE - REST IS FUSJONATOR API
+			url: jso.config.get("endpoints").relay + 'service/version/',
 			dataType: 'json'
 		}).then(function (response) {
 			return response.data;
