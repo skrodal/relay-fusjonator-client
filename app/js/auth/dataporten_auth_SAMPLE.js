@@ -21,9 +21,9 @@ var jso = new JSO({
 	endpoints: {
 		userinfo: "https://auth.dataporten.no/userinfo",
 		photo: "https://auth.dataporten.no/user/media/",
-		relay_fusjonator: "https://tr-fusjonator.gk.feideconnect.no/api/relay-fusjonator/",
+		relay_fusjonator: "https://tr-fusjonator.dataporten-api.no/api/relay-fusjonator/",
 		// Official Relay API - used solely to get prod version number
-		relay: 'https://techsmith-relay.gk.feideconnect.no/api/techsmith-relay/'
+		relay: 'https://techsmith-relay.dataporten-api.no/api/techsmith-relay/'
 	}
 });
 
