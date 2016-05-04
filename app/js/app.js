@@ -7,7 +7,7 @@ var APP = (function () {
 
 	// Bootstrapping after all necessary AJAX calls have been completed
 	$(document).ready(function () {
-		$.when(FEIDE_CONNECT.readyUser()).then(function (user) {
+		$.when(DATAPORTEN.readyUser()).then(function (user) {
 			updateUserUI();
 			MENU.init();
 		});
@@ -22,15 +22,15 @@ var APP = (function () {
 
 	function updateUserUI() {
 		// User-specific
-		$('.userFirstName').html(' ' + FEIDE_CONNECT.user().name.first);
-		$('.userFullName').html(' ' + FEIDE_CONNECT.user().name.full);
-		$('.feideOrg').html(' ' + FEIDE_CONNECT.user().org.id);
-		$('.feideOrgShortname').html(' ' + FEIDE_CONNECT.user().org.shortname);
+		$('.userFirstName').html(' ' + DATAPORTEN.user().name.first);
+		$('.userFullName').html(' ' + DATAPORTEN.user().name.full);
+		$('.feideOrg').html(' ' + DATAPORTEN.user().org.id);
+		$('.feideOrgShortname').html(' ' + DATAPORTEN.user().org.shortname);
 
 		$('.feideAffiliation').html(' admin');
-		$('.userImage').attr('src', FEIDE_CONNECT.user().photo);
+		$('.userImage').attr('src', DATAPORTEN.user().photo);
 		// Dev
-		$('#connectSessionInfo').text(JSON.stringify(FEIDE_CONNECT.user(), undefined, 2));
+		$('#connectSessionInfo').text(JSON.stringify(DATAPORTEN.user(), undefined, 2));
 		// Show top logout dropdown
 		$('#userMenu').fadeIn().removeClass('hidden');
 		//

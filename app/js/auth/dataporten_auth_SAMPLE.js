@@ -1,5 +1,5 @@
 /**
- * Feide Connect JSO kickoff for this client.
+ * Dataporten JSO kickoff for this client.
  *
  * Auth and collection of user/group info, all combined in a USER object.
  *
@@ -10,17 +10,17 @@ var DEV = !true;
 
 // Settings pertaining to this client.
 var jso = new JSO({
-	providerID: "FC-relay_fusjonator-fusjonator",
+	providerID: "DP-relay_fusjonator-fusjonator",
 	client_id: "CHANGEME TO: CLIENT_ID IN DASHBOARD",
 	redirect_uri: "CHANGEME TO: REDIRECT URI IN DASHBOARD",
-	authorization: "https://auth.feideconnect.no/oauth/authorization",
+	authorization: "https://auth.dataporten.no/oauth/authorization",
 	scopes: {
 		request: ["userinfo", "userinfo-mail", "userinfo-photo", "userinfo-feide", "gk_tr-fusjonator", "gk_tr-fusjonator_admin", "gk_techsmith-relay"],
 		require: ["userinfo", "userinfo-mail", "userinfo-photo", "userinfo-feide", "gk_tr-fusjonator", "gk_tr-fusjonator_admin", "gk_techsmith-relay"]
 	},
 	endpoints: {
-		userinfo: "https://auth.feideconnect.no/userinfo",
-		photo: "https://auth.feideconnect.no/user/media/",
+		userinfo: "https://auth.dataporten.no/userinfo",
+		photo: "https://auth.dataporten.no/user/media/",
 		relay_fusjonator: "https://tr-fusjonator.gk.feideconnect.no/api/relay-fusjonator/",
 		// Official Relay API - used solely to get prod version number
 		relay: 'https://techsmith-relay.gk.feideconnect.no/api/techsmith-relay/'

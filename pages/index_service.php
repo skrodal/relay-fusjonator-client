@@ -108,7 +108,7 @@
 
 					    <ol>
 						    <li>
-							    Først, lim inn din CSV-liste med brukernavn og klikk knappen under. Dette gjør et oppslag hos Adobe Connect
+							    Først, lim inn din CSV-liste med brukernavn og klikk knappen under. Dette gjør et oppslag hos Relay
 							    for å finne ut hvilke brukernavn i lista som faktisk har konto. Den vil også sjekke om evt. noen av de nye
 							    brukernavnene eksisterer.
 						    </li>
