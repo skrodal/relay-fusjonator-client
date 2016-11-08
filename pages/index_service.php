@@ -11,6 +11,11 @@
 			    skriver til en gammel database.
 		    </p>
 
+		    <ol>
+			    <li>Prod DB: <code class="relayProdVersion"></code></li>
+			    <li>Fusjonator DB: <code class="relayFusjonatorVersion"></code></li>
+		    </ol>
+
 		    <p>
 			    <mark>Dette er ikke nødvendigvis feil altså. Dersom du bare skal teste Fusjonatoren er dette faktisk veldig bra :)</mark>
 		    </p>

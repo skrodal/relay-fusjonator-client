@@ -14,6 +14,8 @@ var APP = (function () {
 
 		$.when(RELAY.getRelayVersionXHR(), RELAY.getRelayFusjonatorVersionXHR()).then(function (relayVersion, relayFusjonatorVersion){
 			if(relayVersion !== relayFusjonatorVersion) {
+				$('#versionMismatchWarning').find('.relayFusjonatorVersion').html(relayFusjonatorVersion);
+				$('#versionMismatchWarning').find('.relayProdVersion').html(relayVersion);
 				$('#versionMismatchWarning').removeClass('hidden');
 			}
 		});
