@@ -34,3 +34,7 @@ Klienten er registrert i UNINETT Dataporten og benytter seg av følgende 3.parts
 ### UI 
 
 ![Preview](/app/img/RelayFusjonator.png)
+
+## Annet ##
+
+Utviklet av Simon Skrødal for UNINETT
